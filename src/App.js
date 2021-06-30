@@ -8,7 +8,7 @@ import {
   CardContent,
 } from "@material-ui/core";
 import InfoBox from "./InfoBox";
-import LineGraph from "./LineGraph";
+// import LineGraph from "./LineGraph";
 import Table from "./Table";
 import { sortData, prettyPrintStat } from "./util";
 import numeral from "numeral";
@@ -85,7 +85,7 @@ const App = () => {
       <div className="app__left">
         <div className="app__header">
           {/* <h1>COVID-19 TRACKER</h1> */}
-          <img src={covid19} alt="COVID19 Tracker"></img>
+          <img className="title" src={covid19} alt="COVID19 Tracker"></img>
           <FormControl className="app__dropdown">
             <Select
               variant="outlined"
@@ -136,8 +136,8 @@ const App = () => {
           <div className="app__information">
             <h3>Live Cases by Country</h3>
             <Table countries={tableData} />
-            <h3>Worldwide new {casesType}</h3>
-            <LineGraph casesType={casesType} />
+            {/* <h3>Worldwide new {casesType}</h3> */}
+            {/* <LineGraph casesType={casesType} /> */}
           </div>
         </CardContent>
       </Card>
